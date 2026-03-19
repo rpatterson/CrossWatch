@@ -7,10 +7,14 @@ services:
       - "8787:8787"
     environment:
       TZ: "Europe/Amsterdam"
-    volumes:
-      - type: "volume"
-        source: "crosswatch_config"
-        target: "/config"
+    # Uncomment the volume type for your deployment:
+    # volumes:
+    #   - type: "volume"
+    #     source: "crosswatch_config"
+    #     target: "/config/"
+    #   - type: "bind"
+    #     source: "./crosswatch/config/"
+    #     target: "/config/"
     restart: "unless-stopped"
 
 volumes:
