@@ -15,7 +15,6 @@ services:
     #   - type: "bind"
     #     source: "./crosswatch/config/"
     #     target: "/config/"
-    restart: "unless-stopped"
 
 volumes:
   crosswatch_config:
