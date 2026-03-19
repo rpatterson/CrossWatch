@@ -4,9 +4,9 @@ services:
     image: "ghcr.io/cenodude/crosswatch:latest"
     container_name: "crosswatch"
     ports:
-      - "8787:8787"
+      - "${LAN_IP:-127.0.0.1}:8787:8787"
     environment:
-      TZ: "Europe/Amsterdam"
+      TZ: "${TZ:-Etc/UTC}"
     # Uncomment the volume type for your deployment:
     # volumes:
     #   - type: "volume"
